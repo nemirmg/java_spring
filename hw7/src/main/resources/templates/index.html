@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<head>
+    <meta charset="UTF-8">
+    <title>Main Page</title>
+</head>
+<body>
+<h1>Main Page</h1>
+<br>
+<br>
+<div th:fragment="login" class="login"
+     sec:authorize="!isAuthenticated()">
+    <a class="link-primary" th:href="@{/login}">Login page</a>
+</div>
+<br>
+<br>
+<div sec:authorize="hasAnyRole('ROLE_USER', 'ROLE_ADMIN')">
+    <a class="link-primary" th:href="@{/public}">Users page</a>
+</div>
+<br>
+<br>
+<div sec:authorize="hasRole('ROLE_ADMIN')">
+    <a class="link-primary" th:href="@{/private}">Admins page</a>
+</div>
+<br>
+<div th:fragment="logout" class="logout"
+     sec:authorize="isAuthenticated()">
+    <a class="link-primary" th:href="@{/logout}">logout</a>
+</div>
+</body>
+</html>
