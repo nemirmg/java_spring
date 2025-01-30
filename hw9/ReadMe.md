@@ -1,4 +1,4 @@
-Задание:
+# Задание:
 Добавить в один из Ваших проектов сделанных ранее ApiGateWay и Eureka.\
 В проекте обязательно должна быть Spring Data.
 
@@ -12,13 +12,11 @@
 Eureka server запускаются на порту:
 http://localhost:8761
 
-## Запуск из конфигурации "run all" в idea
+### Запуск из конфигурации "run all"
 Запустятся 4 модуля.
 
 API микросервисов:
 
-Главная страница (get запрос):  http://localhost:8080/shop/
-
-Переход по товарам (get запрос): http://localhost:8080/shop/product/1
-
+Главная страница (get запрос):  http://localhost:8080/shop/ \
+Переход по товарам (get запрос): http://localhost:8080/shop/product/1 \
 Покупка товара (post запрос): http://localhost:8080/shop/buyProduct
